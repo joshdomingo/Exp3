@@ -1,0 +1,54 @@
+#include <iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	
+	double a[7], b[7], c[7];
+	{
+		cout << "Please enter all temperature for a week of Province A,"<<endl;
+		cout << "Province B and then Province C." << endl << endl;
+
+		int index = 1;
+		while (index <= 7)
+		{
+			cout << "Province A, Day " << index << ":";
+			cin >> a[index];
+			index++;
+		}
+		index = 1;
+		while (index <= 7)
+		{
+			cout << "Province B, Day " << index << ":";
+			cin >> b[index];
+			index++;
+		}
+		index = 1;
+		while (index <= 7)
+		{
+			cout << "Province C, Day " << index << ":";
+			cin >> c[index];
+			index++;
+		}
+	}
+
+	cout << endl<<endl<< "Displaying Values:"<<endl;
+	int index;
+	for ( index = 1; index <= 7; index++)
+	{
+			cout << "Province A, Day " << index << " = " << a[index] << endl;
+	
+	}
+	for ( index = 1; index <=7; index++)
+	{
+			cout << "Province B, Day " << index << " = " << b[index]<< endl;
+
+	}
+	for ( index = 1; index <= 7; index++)
+	{
+			cout << "Province C, Day " << index << " = " << c[index] << endl;
+
+	}
+	_getch();
+	return 0;
+}
