@@ -1,0 +1,38 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a, b, c, d, e, f, g, h, i, j, index, largest, small, max,min;
+	double sum,ave;
+
+	cout << "Enter 10 numbers:" << endl;
+	cin >> a >> b >> c >> d >> e >> f >> g >> h >> i >> j;
+
+	int arr[10] = { a,b,c,d,e,f,g,h,i,j };
+	sum = 0;
+	for (index = 0; index < 10; index++)
+		sum = sum + arr[index];
+
+	ave = sum / 10;
+
+	max = 0;
+	for (index = 1; index < 10; index++)
+		if (arr[max] < arr[index])
+			max = index;
+	largest = arr[max];
+
+	min = 0;
+	for (index = 1; index < 10; index++)
+		if (arr[min] > arr[index])
+			min = index;
+	small = arr[min];
+	cout << "The smallest number is " << small << endl;
+	cout << "The largest number is " << largest << endl;
+	cout << "The total is " << sum << endl;
+	cout << "The average is " << ave << endl;
+
+	_getch();
+	return 0;
+
+}
